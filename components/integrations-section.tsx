@@ -132,20 +132,24 @@ export function IntegrationsSection() {
                 </Badge>
               )}
               <CardHeader className="text-center pb-4">
-                <div className="w-16 h-16 mx-auto mb-4 p-3 rounded-xl bg-muted/50 group-hover:bg-muted transition-colors">
+               <div className="w-16 h-16 mx-auto mb-4 p-3 rounded-xl bg-muted/50 group-hover:bg-muted transition-colors">
                   <img 
                     src={integration.logo} 
                     alt={`${integration.name} logo`}
                     className="w-full h-full object-contain"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none'
-                      e.currentTarget.nextElementSibling.style.display = 'flex'
+                      const fallback = e.currentTarget.nextElementSibling as HTMLElement | null
+                      if (fallback) {
+                        fallback.style.display = 'flex'
+                      }
                     }}
                   />
                   <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg items-center justify-center text-white font-bold text-lg hidden">
                     {integration.name.charAt(0)}
                   </div>
                 </div>
+
                 <CardTitle className="text-lg">{integration.name}</CardTitle>
                 <Badge variant="outline" className="text-xs">
                   {integration.category}
