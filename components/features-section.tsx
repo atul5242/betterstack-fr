@@ -18,7 +18,33 @@ import {
   Database
 } from 'lucide-react'
 
-const features = [
+// Define allowed color keys based on colorClasses
+const colorClasses = {
+  blue: "from-blue-500 to-blue-600",
+  purple: "from-purple-500 to-purple-600",
+  green: "from-green-500 to-green-600",
+  red: "from-red-500 to-red-600",
+  yellow: "from-yellow-500 to-yellow-600",
+  indigo: "from-indigo-500 to-indigo-600",
+  pink: "from-pink-500 to-pink-600",
+  teal: "from-teal-500 to-teal-600",
+  orange: "from-orange-500 to-orange-600",
+  cyan: "from-cyan-500 to-cyan-600",
+  violet: "from-violet-500 to-violet-600",
+  emerald: "from-emerald-500 to-emerald-600",
+}
+
+type FeatureColor = keyof typeof colorClasses
+
+type Feature = {
+  icon: React.ElementType
+  title: string
+  description: string
+  badge: string
+  color: FeatureColor
+}
+
+const features: Feature[] = [
   {
     icon: Monitor,
     title: "Website & API Monitoring",
@@ -104,21 +130,6 @@ const features = [
     color: "emerald"
   }
 ]
-
-const colorClasses = {
-  blue: "from-blue-500 to-blue-600",
-  purple: "from-purple-500 to-purple-600",
-  green: "from-green-500 to-green-600",
-  red: "from-red-500 to-red-600",
-  yellow: "from-yellow-500 to-yellow-600",
-  indigo: "from-indigo-500 to-indigo-600",
-  pink: "from-pink-500 to-pink-600",
-  teal: "from-teal-500 to-teal-600",
-  orange: "from-orange-500 to-orange-600",
-  cyan: "from-cyan-500 to-cyan-600",
-  violet: "from-violet-500 to-violet-600",
-  emerald: "from-emerald-500 to-emerald-600"
-}
 
 export function FeaturesSection() {
   return (
