@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Menu, X, Moon, Sun, Monitor } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { Logo } from '@/components/logo'
 import { 
   DropdownMenu, 
   DropdownMenuContent, 
@@ -18,9 +19,9 @@ export function Header() {
   const navigation = [
     { name: 'Features', href: '#features' },
     { name: 'Pricing', href: '#pricing' },
+    { name: 'Integrations', href: '#integrations' },
     { name: 'Customers', href: '#testimonials' },
-    { name: 'Resources', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Docs', href: '#' },
   ]
 
   return (
@@ -28,12 +29,7 @@ export function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center">
-            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold">
-              BS
-            </div>
-            <span className="ml-2 text-xl font-bold">BetterStack</span>
-          </div>
+          <Logo />
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -74,7 +70,9 @@ export function Header() {
               </DropdownMenuContent>
             </DropdownMenu>
             <Button variant="ghost">Sign in</Button>
-            <Button>Start free trial</Button>
+            <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+              Start free trial
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -129,7 +127,9 @@ export function Header() {
                 <Button variant="ghost" className="w-full justify-start">
                   Sign in
                 </Button>
-                <Button className="w-full">Start free trial</Button>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+                  Start free trial
+                </Button>
               </div>
             </div>
           </div>

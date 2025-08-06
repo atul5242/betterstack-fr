@@ -1,12 +1,14 @@
 "use client"
 
 import { Separator } from '@/components/ui/separator'
+import { Logo } from '@/components/logo'
 import { 
   Twitter, 
   Github, 
   Linkedin, 
   Mail,
-  Monitor
+  MapPin,
+  Phone
 } from 'lucide-react'
 
 const navigation = {
@@ -24,6 +26,7 @@ const navigation = {
     { name: 'Careers', href: '#' },
     { name: 'Press Kit', href: '#' },
     { name: 'Contact', href: '#' },
+    { name: 'Partners', href: '#' },
   ],
   resources: [
     { name: 'Documentation', href: '#' },
@@ -31,6 +34,7 @@ const navigation = {
     { name: 'Help Center', href: '#' },
     { name: 'Status Page', href: '#' },
     { name: 'Changelog', href: '#' },
+    { name: 'System Status', href: '#' },
   ],
   legal: [
     { name: 'Privacy Policy', href: '#' },
@@ -38,6 +42,7 @@ const navigation = {
     { name: 'Cookie Policy', href: '#' },
     { name: 'GDPR', href: '#' },
     { name: 'Security', href: '#' },
+    { name: 'Compliance', href: '#' },
   ],
 }
 
@@ -59,7 +64,7 @@ const social = [
   },
   {
     name: 'Email',
-    href: '#',
+    href: 'mailto:hello@uptimematrix.com',
     icon: Mail,
   },
 ]
@@ -68,18 +73,31 @@ export function Footer() {
   return (
     <footer className="bg-muted/30 border-t">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           {/* Logo and Description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-primary-foreground font-bold">
-                <Monitor className="h-5 w-5" />
-              </div>
-              <span className="ml-2 text-xl font-bold">BetterStack</span>
-            </div>
-            <p className="text-muted-foreground text-sm mb-6">
-              Better monitoring for modern infrastructure. Trusted by 1000+ companies worldwide.
+          <div className="lg:col-span-2">
+            <Logo className="mb-4" />
+            <p className="text-muted-foreground text-sm mb-6 leading-relaxed">
+              UptimeMatrix provides comprehensive monitoring for your entire infrastructure. Monitor everything, break nothing, fix instantly.
             </p>
+            
+            {/* Contact Info */}
+            <div className="space-y-2 mb-6">
+              <div className="flex items-center text-sm text-muted-foreground">
+                <Mail className="h-4 w-4 mr-2" />
+                hello@uptimematrix.com
+              </div>
+              <div className="flex items-center text-sm text-muted-foreground">
+                <Phone className="h-4 w-4 mr-2" />
+                +1 (555) 123-4567
+              </div>
+              <div className="flex items-center text-sm text-muted-foreground">
+                <MapPin className="h-4 w-4 mr-2" />
+                San Francisco, CA
+              </div>
+            </div>
+            
+            {/* Social Links */}
             <div className="flex space-x-4">
               {social.map((item) => {
                 const Icon = item.icon
@@ -87,7 +105,7 @@ export function Footer() {
                   <a
                     key={item.name}
                     href={item.href}
-                    className="text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg hover:bg-muted"
                   >
                     <span className="sr-only">{item.name}</span>
                     <Icon className="h-5 w-5" />
@@ -167,11 +185,11 @@ export function Footer() {
 
         <div className="flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2025 BetterStack. All rights reserved.
+            © 2025 UptimeMatrix. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
             <span className="text-xs text-muted-foreground">
-              Built with ❤️ for developers
+              Built with ❤️ for developers and DevOps teams
             </span>
           </div>
         </div>

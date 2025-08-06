@@ -6,29 +6,29 @@ import { ThemeProvider } from '@/components/theme-provider';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'BetterStack - Better monitoring for modern infrastructure',
-  description: 'Monitor your entire stack, get alerted when things break, and resolve incidents faster with our all-in-one monitoring platform trusted by 1000+ companies.',
-  keywords: 'monitoring, uptime, infrastructure, incident management, status pages, alerts',
-  authors: [{ name: 'BetterStack' }],
-  creator: 'BetterStack',
-  publisher: 'BetterStack',
+  title: 'UptimeMatrix - Monitor everything. Break nothing. Fix instantly.',
+  description: 'Comprehensive monitoring for your entire infrastructure. Get instant alerts, detailed analytics, and automated incident response to keep your services running 24/7.',
+  keywords: 'monitoring, uptime, infrastructure, incident management, status pages, alerts, DevOps, SRE',
+  authors: [{ name: 'UptimeMatrix' }],
+  creator: 'UptimeMatrix',
+  publisher: 'UptimeMatrix',
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://betterstack.com'),
+  metadataBase: new URL('https://uptimematrix.com'),
   openGraph: {
-    title: 'BetterStack - Better monitoring for modern infrastructure',
-    description: 'Monitor your entire stack, get alerted when things break, and resolve incidents faster with our all-in-one monitoring platform.',
-    url: 'https://betterstack.com',
-    siteName: 'BetterStack',
+    title: 'UptimeMatrix - Monitor everything. Break nothing. Fix instantly.',
+    description: 'Comprehensive monitoring for your entire infrastructure with instant alerts and automated incident response.',
+    url: 'https://uptimematrix.com',
+    siteName: 'UptimeMatrix',
     images: [
       {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'BetterStack - Monitoring Platform',
+        alt: 'UptimeMatrix - Infrastructure Monitoring Platform',
       },
     ],
     locale: 'en_US',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'BetterStack - Better monitoring for modern infrastructure',
-    description: 'Monitor your entire stack, get alerted when things break, and resolve incidents faster.',
-    creator: '@betterstack',
+    title: 'UptimeMatrix - Monitor everything. Break nothing. Fix instantly.',
+    description: 'Comprehensive monitoring for your entire infrastructure with instant alerts and automated incident response.',
+    creator: '@uptimematrix',
     images: ['/og-image.jpg'],
   },
   robots: {
