@@ -5,6 +5,9 @@ import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Star, ArrowRight } from 'lucide-react'
 
+// Define the color type based on keys of colorClasses
+type Color = keyof typeof colorClasses
+
 const testimonials = [
   {
     name: "Sarah Chen",
@@ -62,17 +65,6 @@ const testimonials = [
   }
 ]
 
-const companies = [
-  { name: "TechFlow", logo: "TF", color: "blue" },
-  { name: "CloudScale", logo: "CS", color: "green" },
-  { name: "DataStream", logo: "DS", color: "purple" },
-  { name: "FinanceApp", logo: "FA", color: "orange" },
-  { name: "E-commerce Plus", logo: "E+", color: "pink" },
-  { name: "StartupCore", logo: "SC", color: "teal" },
-  { name: "DevTools", logo: "DT", color: "indigo" },
-  { name: "WebSolutions", logo: "WS", color: "red" }
-]
-
 const colorClasses = {
   blue: "from-blue-500 to-blue-600",
   green: "from-green-500 to-green-600",
@@ -83,6 +75,17 @@ const colorClasses = {
   indigo: "from-indigo-500 to-indigo-600",
   red: "from-red-500 to-red-600"
 }
+
+const companies: { name: string; logo: string; color: Color }[] = [
+  { name: "TechFlow", logo: "TF", color: "blue" },
+  { name: "CloudScale", logo: "CS", color: "green" },
+  { name: "DataStream", logo: "DS", color: "purple" },
+  { name: "FinanceApp", logo: "FA", color: "orange" },
+  { name: "E-commerce Plus", logo: "E+", color: "pink" },
+  { name: "StartupCore", logo: "SC", color: "teal" },
+  { name: "DevTools", logo: "DT", color: "indigo" },
+  { name: "WebSolutions", logo: "WS", color: "red" }
+]
 
 export function TestimonialsSection() {
   return (
