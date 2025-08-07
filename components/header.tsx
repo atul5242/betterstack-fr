@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
-import { Menu, X, Moon, Sun, Monitor, Link } from 'lucide-react'
+import { Menu, X, Moon, Sun, Monitor } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { Logo } from '@/components/logo'
 import { 
@@ -69,11 +69,9 @@ export function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="ghost" asChild>
-              <Link href="/auth/login">Sign in</Link>
-            </Button>
+            <Button variant="ghost">Sign in</Button>
             <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
-              <Link href="/auth/signup">Start free trial</Link>
+              Start free trial
             </Button>
           </div>
 
@@ -126,11 +124,11 @@ export function Header() {
                 </a>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Button variant="ghost" className="w-full justify-start" asChild>
-                  <Link href="/auth/login">Sign in</Link>
+                <Button variant="ghost" className="w-full justify-start">
+                  Sign in
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700" asChild>
-                  <Link href="/auth/signup">Start free trial</Link>
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
+                  Start free trial
                 </Button>
               </div>
             </div>
