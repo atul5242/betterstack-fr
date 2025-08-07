@@ -69,9 +69,11 @@ export function Header() {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Button variant="ghost">Sign in</Button>
+            <Button variant="ghost" asChild>
+              <Link href="/auth/login">Sign in</Link>
+            </Button>
             <Button className="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
-              Start free trial
+              <Link href="/auth/signup">Start free trial</Link>
             </Button>
           </div>
 
@@ -124,11 +126,11 @@ export function Header() {
                 </a>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Button variant="ghost" className="w-full justify-start">
-                  Sign in
+                <Button variant="ghost" className="w-full justify-start" asChild>
+                  <Link href="/auth/login">Sign in</Link>
                 </Button>
-                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700">
-                  Start free trial
+                <Button className="w-full bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700" asChild>
+                  <Link href="/auth/signup">Start free trial</Link>
                 </Button>
               </div>
             </div>

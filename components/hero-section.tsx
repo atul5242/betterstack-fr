@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent } from '@/components/ui/card'
 import { Play, ArrowRight, CheckCircle, AlertTriangle, TrendingUp, Activity } from 'lucide-react'
+import Link from 'next/link'
 
 export function HeroSection() {
   return (
