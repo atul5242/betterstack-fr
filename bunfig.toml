@@ -17,7 +17,7 @@ cache = "node_modules/.cache/bun"
 
 [run]
 # Equivalent to npm run behavior
-shell = "bash"
+shell = "system"
 # Set environment variables for all scripts
 env = { NODE_ENV = "development" }
 

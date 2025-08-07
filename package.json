@@ -7,12 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "type-check": "bun run tsc --noEmit",
     "clean": "rimraf .next out dist",
     "bun:dev": "bun run next dev",
     "bun:build": "bun run next build",
     "bun:start": "bun run next start",
-    "bun:lint": "bun run next lint"
+    "bun:lint": "bun run next lint",
+    "type-check": "bun run tsc --noEmit"
   },
   "packageManager": "bun@1.0.0",
   "engines": {
