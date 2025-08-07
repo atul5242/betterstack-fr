@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "bun run next dev",
-    "build": "bun run next build",
-    "start": "bun run next start",
-    "lint": "bun run next lint",
-    "install": "bun install",
-    "clean": "bun run rm -rf .next node_modules",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "clean": "rimraf .next out dist",
+    "bun:dev": "bun run next dev",
+    "bun:build": "bun run next build",
+    "bun:start": "bun run next start",
+    "bun:lint": "bun run next lint"
     "type-check": "bun run tsc --noEmit"
   },
   "packageManager": "bun@1.0.0",
