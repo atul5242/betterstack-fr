@@ -1,0 +1,34 @@
+# Bun configuration file
+# This replaces npm configuration and provides Bun-specific settings
+
+[install]
+# Equivalent to npm's package-lock.json behavior
+lockfile = true
+# Use exact versions (equivalent to npm's --save-exact)
+exact = false
+# Install peer dependencies automatically
+peer = true
+# Cache directory for packages
+cache = "node_modules/.cache/bun"
+
+[install.scopes]
+# Configure scoped package registries if needed
+# "@company" = "https://npm.company.com"
+
+[run]
+# Equivalent to npm run behavior
+shell = "bash"
+# Set environment variables for all scripts
+env = { NODE_ENV = "development" }
+
+[build]
+# Build-specific configurations
+target = "browser"
+format = "esm"
+splitting = true
+minify = false
+
+[dev]
+# Development server configurations
+hot = true
+port = 3000
